@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<style>
+		html,body{
+			background-color:#F5F5F5;
+			padding: 0;
+			/*background-color:#F5F5F5; */
+			/*height: 100%;*/
+		}
+		.dayListTable{
+			position: relative;
+			height: 999px;
+			width: 100%;
+			top:0px;
+				
+		}
+		.left_yesterday{
+			position: absolute;
+			/*background-color: rgba(0,0,0,0.6);*/
+			width:50%;
+			left:0;
+			top: 0px;
+			height: 100%;
+			border-right: 2px solid #E5EDEA; 
+		}
+		.right_today{
+			position: absolute;
+			/*background-color: rgba(0,0,0,0.9);*/
+			width:50%;
+			right:0;
+			top: 0;
+			height:100%;
+			border-left: 2px solid #E5EDEA;
+		}
+		.daylist_main{
+			margin:1px 2px;
+		}
+		.daylist_main ul{
+
+		}
+		.daylist_main ul li{
+     
+		}
+		.daylist_main ul li input{
+			width: 90%;
+			height: 25px;
+			float:right;
+			border-bottom: 1px solid #cccad1;
+		}
+        .daylist_main ul li span{
+            width: 10%;
+            float:left;
+
+        }
+		.yesterday_top{
+		}
+	</style>
+</head>
+<body>
+    <label id="con" onclick="api.closeFrame({name:'wing_add_daylist'})">返回</label>
+    <div id="main">
+    	<table class="dayListTable">
+    		<tr> 
+    			<td>
+    				<div class="left_yesterday">
+    					<div class="yesterday_top alert alert-success" role="alert">
+    						历史未完成
+    					</div>
+    					<div class="daylist_main">
+    						<ul id="mainLeft_ul">
+    							<!-- <li><span class=""></span><input type="text" name="" disabled></li> -->
+    						</ul>
+    					</div>
+    				</div>
+    			</td>
+    			<td>
+    				<div class="right_today">
+    					<div class="yesterday_top alert alert-success" role="alert">
+    						今天已计划
+    					</div>
+    					<div class="daylist_main">
+    						<ul id="tadyList_ul">
+    							<li><input type="text" name="" data-id="" onblur="saveDayThis(this)" placeholder="点击新建计划"></li>
+    						</ul>
+    					</div>
+    				</div>
+
+    			</td>
+    		</tr>
+    	</table>
+    </div>
+    <div id="footer">
+	    
+	</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        // daylist("wing_add_daylist");
+    		// api.ajax({
+      //           url: 'http://10.131.11.139:10000/reminder/daily/index/',
+      //           method: 'get',
+      //           data: {}
+      //       },function(ret, err){
+      //           // document.getElementById('test-p');
+      //           // document.getElementsByClassName('');
+      //           // document.getElementsByTagName('');
+      //           // list.appendChild(haskell);
+      //           // mainLeft_li.appendChild(li_input);
+      //           // var mainLeft_li = mainLeft_ul.getElementsByTagName("li");
+      //           // alert(JSON.stringify( mainLeft_li ));
+      //           // mainLeft_ul.innerHTML = "";
+      //           // var li = document.createElement('li');
+      //           // for(var i=0;i<history.length;i++){
+      //           // var cLi = mainLeft_li.cloneNode(true);
+      //           // cLi.getElementsByTagName("input").value = history[i].content;
+      //           // mainLeft_ul.appendChild(mainLeft_li);
+      //           // var cLi = mainLeft_li.cloneNode (true );
+      //           // mainLeft_li.getElementsByTagName("input").value = today[i].content;
+      //           // alert(mainLeft_li.getElementsByTagName("input").value);
+      //           // li_input.setAttribute(value,today[i].content);
+
+
+      //           if (ret) {
+      //               if(ret.code==0){
+      //                   var mainLeft_ul = $api.byId('mainLeft_ul');
+      //                   var todayList_ul = $api.byId('tadyList_ul');
+      //                   var mainLeft_li = document.createElement('li')
+      //                   var mainright_li = document.createElement('li')
+      //                   var history =  ret.data.history ;
+      //                   var today =  ret.data.today ;
+      //                   for(var i=0;i<history.length;i++){
+      //                     var li_inputLeft = document.createElement('input')
+      //                     li_inputLeft.setAttribute('data-id',history[i].id);
+      //                     li_inputLeft.value = history[i].content;
+      //                     li_inputLeft.setAttribute('disabled',"disabled");
+      //                     mainLeft_li.appendChild(li_inputLeft);
+      //                     mainLeft_ul.appendChild(mainLeft_li);
+      //                   }
+      //                   for(var i=0;i<today.length;i++){
+      //                     var li_input = document.createElement('input')
+      //                     li_input.setAttribute('data-id',today[i].id);
+      //                     li_input.value = today[i].content;
+      //                     li_input.setAttribute('onblur',"saveDayThis(this)");
+      //                     mainright_li.appendChild(li_input)
+      //                     todayList_ul.appendChild(mainright_li);
+      //                   }
+      //                 }
+      //           } else {
+      //               alert( JSON.stringify( err ) );
+      //           }
+      //       });
+
+        };
+
+    var saveDayThis = function(obj){
+    	var inputVal = obj.value;
+        if(inputVal==''){
+            return false;
+        }
+        //获取obj的data_id属性值
+        var data_id = $api.attr(obj,'data-id');
+        api.ajax({
+            url: 'http://10.131.11.139:10000/reminder/daily/save/',
+            method: 'post',
+            data: {
+                values:{
+                    'id':data_id,
+                    'content' : inputVal,
+                    '_type' : 1
+                }
+            }
+        },function(ret, err){
+            if (ret) {
+              // alert(ret.code)
+                if(ret.code==0){
+                    var dataid = JSON.stringify(ret.data.id);
+                    if(data_id == ''){
+                        obj.setAttribute('data-id',dataid);
+                    }
+                     if(data_id==''){
+                        var tadyList_ul = $api.byId('tadyList_ul');
+                        var mainLeft_li = document.createElement('li');
+                        var li_input = document.createElement('input');
+                        li_input.setAttribute('data-id','');
+                        li_input.setAttribute('onblur',"saveDayThis(this)");
+                        li_input.setAttribute('placeholder',"点击新建计划");
+                        mainLeft_li.appendChild(li_input);
+                        tadyList_ul.insertBefore(mainLeft_li,tadyList_ul.firstChild);
+                  }
+                }else{
+                  alert("参数错误");
+                }
+            } else {
+                alert( JSON.stringify( err ) );
+            }
+        });
+    }
+</script>
+
+</html>

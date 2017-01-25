@@ -6,61 +6,105 @@
     <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
     <title>Hello APP</title>
     <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
 	<style>
-		#con{
-			margin: 10px;
-			font-size: 24px; 
+		body{
+			background-color:#F5F5F5; 
+			height: 100%;
 		}
-		ul{
-			margin-bottom: 10px;
+		.day_active{
+			z-index: 999;
 		}
-		ul li{ 
-			margin: 5px 10px;
-			padding: 5px;
-			color: #000;
-			word-wrap: break-word;
+		.mon_active{
+			height: 600px;
+    		margin-top: -600px;
+		    position: absolute;
+    		z-index: 999;
+		}
+		.year_active{
+			height: 600px;
+    		margin-top: -600px;
+		}
+		#tadyList_ul li input{
+			width: 90%;
+			height: 30px;
+			float:right;
+			font-size: 13px;color:#4CC9C3;
+			border-bottom: 1px solid #FAE5C9;
+			/*display: block;*/
 		}
 	</style>
 </head>
-<body>
-    <label id="con">Hello APP</label>
-	<div id='sys-info'></div>
+<body >
+    <label id="con" onclick="listClick(this)">返回</label>
+    <div style="">
+	    <div class="everyDayList card-item" id="everyDayList" onclick="listClick(this)">
+	    	<p style="margin: 10px 5px">Plan Daliy</p>
+	  		<ul id="tadyList_ul">
+	  			<!-- <li>&middot;everyday</li>
+	  			<li>曹操</li>
+	  			<li>&middot;治世之能臣</li>
+	  			<li>&middot;乱世之奸雄</li> -->
+	  		</ul> 
+	    </div>
+	    <div class="everyMonList card-item" id="everyMonList" onclick="listClick(this)">
+	    	<p style="margin: 10px 5px;">Plan month </p>
+	    	<ul>
+	  			
+	  		</ul> 
+	    </div>
+	    <div class="everyYearList card-item" id="everyYearList" onclick="listClick(this)">
+	    	<p style="margin: 10px 5px;">Plan year </p>
+	    	<ul>
+	  			<li></li>
+	  			<li>加薪</li>
+	  			<li>迎娶高富帅</li>
+	  			<li>出任CEO</li>
+	  			<li>升职</li>
+	  		</ul> 
+	    </div>
+    </div>
+	<!-- <div id='sys-info'> -->
+	</div>
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
 <script type="text/javascript">
     apiready = function(){
-		var ver = api.version;
-		var sType = api.systemType;
-		var sVer = api.systemVersion;
-		var id = api.deviceId;
-		var model = api.deviceModel;
-		var name = api.deviceName;
-		var cType = api.connectionType;
-		var winName = api.winName;
-		var winWidth = api.winWidth;
-		var winHeight = api.winHeight;
-		var frameName = api.frameName || '';
-		var frameWidth = api.frameWidth || '';
-		var frameHeight = api.frameHeight || '';
+    	daylist("main");
+		// var ver = api.version;
+		// var sType = api.systemType;
+		// var sVer = api.systemVersion;
+		// var id = api.deviceId;
+		// var model = api.deviceModel;
+		// var name = api.deviceName;
+		// var cType = api.connectionType;
+		// var winName = api.winName;
+		// var winWidth = api.winWidth; 
+		// var winHeight = api.winHeight;
+		// var frameName = api.frameName || '';
+		// var frameWidth = api.frameWidth || '';
+		// var frameHeight = api.frameHeight || '';
 
-		var str = '<ul>';
-		str += '<li>引擎版本信息: ' + ver + '</li>';
-		str += '<li>系统类型: ' + sType + '</li>';
-		str += '<li>系统版本: ' + sVer + '</li>';
-		str += '<li>设备标识: ' + id + '</li>';
-		str += '<li>设备型号: ' + model + '</li>';
-		str += '<li>设备名称: ' + name + '</li>';
-		str += '<li>网络状态: ' + cType + '</li>';
-		str += '<li>主窗口名字: ' + winName + '</li>';
-		str += '<li>主窗口宽度: ' + winWidth + '</li>';
-		str += '<li>主窗口高度: ' + winHeight + '</li>';
-		str += '<li>子窗口名字: ' + frameName + '</li>';
-		str += '<li>子窗口宽度: ' + frameWidth + '</li>';
-		str += '<li>子窗口高度: ' + frameHeight + '</li>';
-		str += '</ul>';
+		// var str = '<ul>';
+		// str += '<li>引擎版本信息: ' + ver + '</li>';
+		// str += '<li>系统类型: ' + sType + '</li>';
+		// str += '<li>系统版本: ' + sVer + '</li>';
+		// str += '<li>设备标识: ' + id + '</li>';
+		// str += '<li>设备型号: ' + model + '</li>';
+		// str += '<li>设备名称: ' + name + '</li>';
+		// str += '<li>网络状态: ' + cType + '</li>';
+		// str += '<li>主窗口名字: ' + winName + '</li>';
+		// str += '<li>主窗口宽度: ' + winWidth + '</li>';
+		// str += '<li>主窗口高度: ' + winHeight + '</li>';
+		// str += '<li>子窗口名字: ' + frameName + '</li>';
+		// str += '<li>子窗口宽度: ' + frameWidth + '</li>';
+		// str += '<li>子窗口高度: ' + frameHeight + '</li>';
+		// str += '</ul>';
 
-		$api.byId('sys-info').innerHTML = str;
+		// $api.byId('sys-info').innerHTML = str;
 
     };
 </script>
+
 </html>

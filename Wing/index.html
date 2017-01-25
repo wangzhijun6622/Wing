@@ -5,6 +5,7 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-3.3.5/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/api.css" />
     <style type="text/css">
     html,body{
@@ -17,17 +18,22 @@
         -webkit-flex-flow: column;
     }
     #header{
-        text-align: center; 
-		background-color: #81a9c3; 
-		color: #fff;
         width: 100%;
+        background-color: #323232;
+        height: 30px;
+        position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
     }
-    #header h1{
-        font-size: 20px; 
-		height: 44px; 
-		line-height: 44px; 
-		margin: 0em; 
-		color: #fff;
+    .btn_box{
+        width: 70px;
+        height: 48px;
+        position: relative;
+    }
+    .btn_box .pull_left{
+        position: relative;
+        z-index: 1;
     }
     #main{
         -webkit-box-flex: 1; 
@@ -47,17 +53,66 @@
 		font-size: 28px; 
 		text-align: center;
 	}
+    .home_icon_search{
+        float: left;
+        height: 100%;
+        width: 20px;
+        background: url(./res/img/wing_icon_search.png) center center no-repeat;
+        background-size: 10px 10px;
+    }
+    .search_box{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        background: url(./res/img/wing_search_result_input.9.png) center center no-repeat;
+        background-size: 100% 37px;
+        position: relative;
+        overflow: hidden;
+    }
+    .search_box .text {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        outline:medium;
+        /*text-indent: 37px;*/
+        padding-left: 37px;
+        font-size: 0.9em;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }   
+   
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header">
-            <h1>APICloud</h1>
+        <!-- <div id="header">
+            <div class="btn_box pull-left">
+                <img style="width: 30px;"src="./res/img/wing_qiushi.png" alt="img">
+            </div>
+            <div class="search_box">
+                <i class="home_icon_search"></i>
+                <input type="text" placeholder="输入关键字查询" class="text">
+            </div>
+            <div class="btn_box pull-right">
+                <img style="width: 30px;" src="./res/img/wing_add.png" alt="img">
+            </div>
+        </div> -->
+        <div id="header" >
+            <div class="btn_box pull-left" onclick="openAddSeleList(this)">
+                <img style="width: 30px;height:30px;" src="./res/img/wing_qiushi.png" alt="img">
+            </div>
+             <div class="search_box">
+            </div>
+            <div class="btn_box pull-right" onclick="openAddSeleList(this)">
+                <img style="width: 30px;height:30px;" src="./res/img/wing_add.png" alt="img">
+            </div>
         </div>
         <div id="main">
                 
         </div>
-        <div id="footer">
+        <div id="footer" onclick="listClick(this)">
+            <!-- <h5>返回</h5> -->
             <h5>Copyright &copy;<span id="year"></span> </h5>
         </div>
     </div>
@@ -69,15 +124,9 @@
 		console.log("Hello APICloud");
 
         var header = $api.byId('header');
-        //适配iOS7+，Android4.4+状态栏沉浸式效果，详见config文档statusBarAppearance字段
         $api.fixStatusBar(header);
-		//动态计算header的高度，因iOS7+和Android4.4+上支持沉浸式效果，
-		//因此header的实际高度可能为css样式中声明的44px加上设备状态栏高度
-		//其中，IOS状态栏高度为20px，Android为25px
         var headerH = $api.offset(header).h;
-		//footer高度为css样式中声明的30px
 		var footerH = 30;
-		//frame的高度为当前window高度减去header和footer的高度
 		var frameH = api.winHeight - headerH - footerH;
         api.openFrame({
             name: 'main',
@@ -90,10 +139,46 @@
                 h: frameH
             }
         });
-
         var year = $api.byId('year');
         year.innerHTML = new Date().getFullYear();
 
     };
+    var openAddSeleList = function(obj){
+        // api.toast({
+        //     msg: obj.id,
+        //     duration: 2000,
+        //     location: 'middle'
+        // });
+        // api.openWin({
+        //     name:'wing_add',
+        //     url:'html/wing_add.html',
+        //     bounces:true,
+        //     rect:{
+        //         x:0,
+        //         y:30,
+        //         w:'auto',
+        //         h:'auto'
+        //     }
+
+        // })
+        api.openFrame({
+            name: 'wing_add',
+            url: './html/wing_add.html',
+            rect: {
+                x: 0,
+                y: 30,
+                w: 'auto',
+                h: 'auto'
+            },
+            pageParam: {
+                name: 'test'
+            },
+            bounces: false,
+            // //背景色透明 
+            // bgColor: 'transparent',
+            // vScrollBarEnabled: true,
+            // hScrollBarEnabled: true
+        });
+    }
 </script>
 </html>

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <style>
+        html,body{
+            background-color:#F5F5F5;
+            padding: 0;
+            /*background-color:#F5F5F5; */
+            /*height: 100%;*/
+        }
+        .yearListTable{
+            position: relative;
+            height: 999px;
+            width: 100%;
+            top:0px;
+                
+        }
+        .yearlist_main{
+            margin:1px 2px;
+        }
+        .yearlist_main ul{
+
+        }
+        .yearlist_main ul li{
+
+        }
+        .yearlist_main ul li input{
+            width: 90%;
+            height: 25px;
+            float:right;
+            border-bottom: 1px solid #cccad1;
+        }
+        .yearlist_main ul li span{
+            width: 10%;
+            float:left;
+
+        }
+    </style>
+</head>
+<body>
+    <label id="con" onclick="api.closeFrame({name:'wing_add_monlist'})">返回</label>
+    <div id="main">
+        <div class="alert alert-success" role="alert">
+           <span id="year"></span>计划
+        </div>
+        <div class="yearlist_main">
+            <ul>
+                <li><input type="text" name="" data-id="" onblur="saveDayThis(this)"></li>
+                <li><input type="text" name="" data-id="" onblur="saveDayThis(this)"></li>
+                <li><input type="text" name="" data-id="" onblur="saveDayThis(this)"></li>
+                <li><input type="text" name="" data-id="" onblur="saveDayThis(this)"></li>
+                <li><input type="text" name="" data-id="" onblur="saveDayThis(this)"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        var year = $api.byId('year');
+        year.innerHTML = new Date().getFullYear();
+
+        };
+
+    var saveDayThis = function(obj){
+        var inputVal = obj.value;
+        //获取obj的data_id属性值
+        var data_id = $api.attr(obj,'data-id');
+        api.ajax({
+            url: 'http://10.131.11.139:10000/reminder/save/',
+            method: 'post',
+            data: {
+                values:{
+                    'id':data_id,
+                    'content' : inputVal
+                }
+                
+               
+            }
+        },function(ret, err){
+            if (ret) {
+                if(ret.code==0){
+                    var dataid = JSON.stringify(ret.data.id);
+                    // alert( $(obj));
+
+                    if(data_id == ''){
+                        // alert("11");
+                        obj.setAttribute('data-id',dataid);
+                    }
+                    
+                    // $(obj).attr('data_id',data_id);
+                }
+                // alert( JSON.stringify( ret ) );
+                
+            } else {
+                alert( JSON.stringify( err ) );
+            }
+        });
+    }
+</script>
+
+</html>

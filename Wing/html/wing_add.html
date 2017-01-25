@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<style>
+	 	html,body,#header,#main{
+            background: transparent;
+            padding: 0;
+        }
+		.select_ul{
+			width: 100px;
+			height: 150px;
+			position: absolute;
+			right: 0;
+			z-index: 1;
+			background-color: rgba(0,0,0,0.6);
+		}
+		/*ul li{
+			
+		}*/
+		.select_ul li{
+            height: 49px;
+            line-height: 49px;
+            text-align: center;
+           /* width: 98px;*/
+            color: #FFF;
+            /*cursor:pointer;*/
+            font-size: 16px;
+            border-bottom: 1px solid #C6F7C3;
+        }
+        /*.select_ul li :hover{
+           background-color: #051F27;
+           color: #6AC6DE;
+
+        }*/
+		.shadow{
+			/*background-color:transparent;*/
+			position: absolute;
+			height: 100%;
+			width:100%;
+			left:0;
+			top:0;
+		}
+	</style>
+</head>
+<body >
+	<div id="warp">
+		<div class="shadow" tapmode="tap-active" onclick="api.closeFrame({name:'wing_add'})"></div>
+		<div id="header"></div>
+		<div id="main">
+			<!-- <label id="add_return" onclick="api.closeWin({name:'index'});">返回</label> -->
+		    <ul class="select_ul">
+		    	<li data-name="daylist" onclick="openAddlist(this)">daylist</li>
+		    	<li data-name="monlist" onclick="openAddlist(this)">month</li>
+		    	<li data-name="yearlist"onclick="openAddlist(this)">year</li>
+		    </ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+		window.header = $api.byId('header');
+        $api.fixStatusBar(header); 
+    };
+    var openAddlist = function(obj){
+        var name = $api.attr(obj,'data-name');
+    	api.openFrame({
+    	    name: 'wing_add_'+name+'',
+    	    url: './wing_add_'+name+'.html',
+    	    pageParam: {
+    	        name: 'test'
+    	    },
+    	    rect: {
+                x: 0,
+                y: 30,
+                w: 'auto',
+                h: 'auto'
+            },
+            pageParam: {
+                name: 'test'
+            },
+            bounces: false
+    	});
+    }
+</script>
+
+</html>

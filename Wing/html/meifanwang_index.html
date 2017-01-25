@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+	<style>
+		body{
+			height: 100%
+		}
+		#search_input{
+			border:5px solid #eee;
+		}
+		.input-group-addon{
+			border: 0px;
+		}
+
+		#scrollPics{
+		    height: 300px;
+		    /*width: 100%;*/
+		    margin-bottom: 10px;
+		    overflow: hidden;
+		    position:relative;
+
+		    display:block;
+		    white-space:nowrap;
+		    /* overflow:auto; */
+		}
+		.num{
+		    position:absolute;
+		    right:5px; 
+		    bottom:5px;
+		}
+		#scrollPics .num li{
+		    float: left;
+		    color: #FF7300;
+		    text-align: center;
+		    line-height: 16px;
+		    width: 16px;
+		    height: 16px;
+		    cursor: pointer;
+		    overflow: hidden;
+		    margin: 3px 1px;
+		    border: 1px solid #FF7300;
+		    background-color: #fff;
+		}
+		#scrollPics .num li.on{
+		    color: #fff;
+		    line-height: 21px;
+		    width: 21px;
+		    height: 21px;
+		    font-size: 16px;
+		    margin: 0 1px;
+		    border: 0;
+		    background-color: #FF7300;
+		    font-weight: bold;
+		}
+		#scrollPics .slider li{
+			/*width:100%;*/
+			/*margin:3px;*/
+			display:inline-block; 
+		}
+		#scrollPics .slider img{
+
+		}
+
+
+		.wrapper {
+		  .make-row();
+		}
+		.content-main {
+		  .make-lg-column(8);
+		}
+		.content-secondary {
+		  .make-lg-column(3);
+		  .make-lg-column-offset(1);
+		}
+		</style>
+</head>
+<body >
+	<div id="wrap">
+		<div id="header">
+			<div class="form-group">
+	            <div class="input-group">
+	                <input class="form-control" id="search_input" type="email" placeholder="输入关键字查询" onfocus="if(this.value=='例:卸妆液')this.value=''" onblur="if(this.value=='')this.value='例:卸妆液'">
+	              <div class="input-group-addon" ><span class="glyphicon glyphicon-search"></span></div>
+	            </div>
+	        </div>
+
+			<!-- <input class="form-control" id="search_input" type="text" name="" placeholder="请输入查询内容"> -->
+		</div>
+		<div id="main">
+			<!-- 轮播图 -->
+			<div>
+				<div id="scrollPics">
+				    <ul class="slider" style="position:absolute;float:left;">
+				        <li><img src="../img_mfw/mfw_b.jpg"  /></li>
+				        <li><img src="../img_mfw/mfw_b.jpg"  /></li>
+				        <li><img src="../img_mfw/mfw_c.jpg"  /></li>
+				        <li><img src="../img_mfw/mfw_d.jpg"  /></li>
+				        <li><img src="../img_mfw/mfw_e.jpg"  /></li>
+				    </ul>
+				    <ul class="num" >
+				        <li class="on">1</li>
+				        <li>2</li>
+				        <li>3</li>
+				        <li>4</li>
+				        <li>5</li>
+				    </ul>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<h1> class="Semibold">Semibold<small>fubiaoti </small></h1>
+			<h2>class="Semibold">Semibold</h2> 
+			<p>一般显示的p标签</p>
+			<p class="lead">突出显示的P标签.lead</p>
+		  <div class="content-main">...</div>
+		  <div class="content-secondary">...</div>
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+<script src="../script/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var li_width = $("#scrollPics").width();
+		$("#scrollPics .slider li").css('width',li_width)
+		
+	})
+	//滚动广告
+    var len = $(".num > li").length;
+    var index = 0;  //图片序号
+    var adTimer;
+    $(".num li").mouseover(function() {
+        index = $(".num li").index(this);  //获取鼠标悬浮 li 的index
+        showImg(index);
+    }).eq(0).mouseover();
+    //滑入停止动画，滑出开始动画.
+    $('#scrollPics').hover(function() {
+        clearInterval(adTimer);
+    }, function() {
+        adTimer = setInterval(function() {
+            showImg(index)
+            index++;
+            if (index == len) {       //最后一张图片之后，转到第一张
+                index = 0;
+            }
+        }, 3000);
+    }).trigger("mouseleave");
+    function showImg(index) {
+    	var li_width = $("#scrollPics").width();
+        // var adHeight = $("#scrollPics>ul>li:first").height();
+        var adWidth = $("#scrollPics>ul>li:first").height();
+        $(".slider").stop(true, false).animate({"marginLeft": -li_width * index + "px"}, 1000);
+        $(".num li").removeClass("on")
+            .eq(index).addClass("on");
+    }
+
+</script>
+
+</html>
