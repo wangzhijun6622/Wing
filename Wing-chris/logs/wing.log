@@ -1,0 +1,382 @@
+[2017-01-11 14:02:06,719] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\WorkSpace\ooo\Wing\reminder\views.py", line 17, in save_daliy_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-11 14:02:07,671] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /favicon.ico
+[2017-01-19 18:00:12,082] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /zh-cn/cloud/json/mytasks/
+[2017-01-19 18:00:23,051] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /zh-cn/cloud/json/mytasks/
+[2017-01-19 18:00:34,052] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /zh-cn/cloud/json/mytasks/
+[2017-01-19 18:00:45,104] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /zh-cn/cloud/json/mytasks/
+[2017-01-19 18:00:56,065] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /zh-cn/cloud/json/mytasks/
+[2017-01-19 18:03:18,648] [ERROR]  [django.security.DisallowedHost::204] >>>>func: get_response : Invalid HTTP_HOST header: '10.131.11.139:10000'. You may need to add u'10.131.11.139' to ALLOWED_HOSTS.
+[2017-01-19 18:03:23,056] [ERROR]  [django.security.DisallowedHost::204] >>>>func: get_response : Invalid HTTP_HOST header: '10.131.11.139:10000'. You may need to add u'10.131.11.139' to ALLOWED_HOSTS.
+[2017-01-19 18:03:32,615] [ERROR]  [django.security.DisallowedHost::204] >>>>func: get_response : Invalid HTTP_HOST header: '10.131.11.139:10000'. You may need to add u'10.131.11.139' to ALLOWED_HOSTS.
+[2017-01-19 18:03:39,249] [ERROR]  [django.security.DisallowedHost::204] >>>>func: get_response : Invalid HTTP_HOST header: '10.131.11.139:10000'. You may need to add u'10.131.11.139' to ALLOWED_HOSTS.
+[2017-01-19 18:04:10,628] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daliy_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-19 18:04:25,947] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daliy_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-19 18:05:42,700] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daliy_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-19 18:07:32,072] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 21, in save_daliy_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 14:19:36,782] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\Wing\urls.py", line 20, in <module>
+    url(r'^reminder/', include('reminder.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\reminder\urls.py", line 9, in <module>
+    from reminder import views
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 10, in <module>
+    from reminder.models import Daily_List
+ImportError: cannot import name Daily_List
+[2017-01-20 16:30:15,805] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 16:31:08,746] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 16:32:58,384] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 16:33:28,657] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 16:33:47,614] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 16:35:11,579] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 16:35:11,581] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 16:35:11,588] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    params = json.loads(request.body)
+  File "C:\Python27\lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python27\lib\json\decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+[2017-01-20 16:59:27,796] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\Wing\urls.py", line 20, in <module>
+    url(r'^reminder/', include('reminder.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\reminder\urls.py", line 13, in <module>
+    url(r'^update/?$', views.update_daily_list),
+AttributeError: 'module' object has no attribute 'update_daily_list'
+[2017-01-20 18:21:42,937] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\Wing\urls.py", line 20, in <module>
+    url(r'^reminder/', include('reminder.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\reminder\urls.py", line 9, in <module>
+    from reminder import views
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 50
+    if row.update_time
+                     ^
+SyntaxError: invalid syntax
+[2017-01-20 18:21:44,418] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\Wing\urls.py", line 20, in <module>
+    url(r'^reminder/', include('reminder.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\reminder\urls.py", line 9, in <module>
+    from reminder import views
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 50
+    if row.update_time
+                     ^
+SyntaxError: invalid syntax
+[2017-01-20 18:21:57,592] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\Wing\urls.py", line 20, in <module>
+    url(r'^reminder/', include('reminder.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\reminder\urls.py", line 9, in <module>
+    from reminder import views
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 50
+    if row.update_time
+                     ^
+SyntaxError: invalid syntax
+[2017-01-20 18:21:58,476] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\Wing\urls.py", line 20, in <module>
+    url(r'^reminder/', include('reminder.urls')),
+  File "C:\Python27\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "E:/WorkSpace/ooo/Wing\reminder\urls.py", line 9, in <module>
+    from reminder import views
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 50
+    if row.update_time
+                     ^
+SyntaxError: invalid syntax
+[2017-01-22 10:13:48,938] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    if len(content) > 100:
+TypeError: object of type 'NoneType' has no len()
+[2017-01-22 10:18:38,289] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 20, in save_daily_list
+    if len(content) > 100:
+TypeError: object of type 'NoneType' has no len()
+[2017-01-22 10:22:22,288] [ERROR]  [django.request::256] >>>>func: handle_uncaught_exception : Internal Server Error: /reminder/save/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 40, in save_daily_list
+    daily_id = dy.id
+AttributeError: 'NoneType' object has no attribute 'id'
+[2017-01-22 15:36:43,726] [WARNING]  [django.request::98] >>>>func: _reject : Forbidden (CSRF cookie not set.): /reminder/index/
+[2017-01-22 16:36:01,085] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 16:40:44,428] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 16:42:32,295] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 16:43:04,707] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 16:43:56,446] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 16:44:22,115] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 17:40:06,292] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 17:44:17,628] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 17:54:24,697] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 18:02:14,635] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/
+[2017-01-22 18:03:16,036] [WARNING]  [django.request::170] >>>>func: get_response : Not Found: /reminder/index/

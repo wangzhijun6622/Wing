@@ -1,0 +1,124 @@
+[2017-01-19 18:04:06,322] [INFO]  [reminder::22] >>>>func: save_daliy_list : aaaa
+[2017-01-19 18:04:17,957] [ERROR]  [reminder::34] >>>>func: save_daliy_list : table reminder_daily_list has no column named update_time
+Traceback (most recent call last):
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 32, in save_daliy_list
+    dy.save()
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 734, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 762, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 846, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Python27\lib\site-packages\django\db\models\base.py", line 885, in _do_insert
+    using=using, raw=raw)
+  File "C:\Python27\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\django\db\models\query.py", line 920, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python27\lib\site-packages\django\db\models\sql\compiler.py", line 974, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Python27\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Python27\lib\site-packages\django\db\backends\sqlite3\base.py", line 318, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: table reminder_daily_list has no column named update_time
+[2017-01-20 14:15:13,536] [INFO]  [reminder::23] >>>>func: save_daliy_list : aaaa
+[2017-01-20 14:20:15,552] [INFO]  [reminder::23] >>>>func: save_daliy_list : aaaa
+[2017-01-20 14:35:01,667] [INFO]  [reminder::22] >>>>func: save_daliy_list : aaaa
+[2017-01-20 16:32:01,098] [INFO]  [reminder::22] >>>>func: save_daily_list : aaaa
+[2017-01-20 16:36:15,049] [INFO]  [reminder::21] >>>>func: save_daily_list : uuuuuuuuu
+[2017-01-20 16:36:47,829] [INFO]  [reminder::21] >>>>func: save_daily_list : uuuuuuuuussss
+[2017-01-20 16:38:55,812] [INFO]  [reminder::21] >>>>func: save_daily_list : uu
+[2017-01-20 16:39:20,834] [INFO]  [reminder::21] >>>>func: save_daily_list : uufffff
+[2017-01-20 16:39:40,398] [INFO]  [reminder::21] >>>>func: save_daily_list : eeeeeeee
+[2017-01-20 16:39:42,674] [INFO]  [reminder::21] >>>>func: save_daily_list : 
+[2017-01-20 16:39:42,979] [INFO]  [reminder::21] >>>>func: save_daily_list : 
+[2017-01-20 16:40:32,836] [INFO]  [reminder::21] >>>>func: save_daily_list : 
+[2017-01-20 16:40:57,930] [INFO]  [reminder::21] >>>>func: save_daily_list : sssss
+[2017-01-20 16:41:23,177] [INFO]  [reminder::21] >>>>func: save_daily_list : dddd
+[2017-01-20 16:41:51,693] [INFO]  [reminder::21] >>>>func: save_daily_list : ssss
+[2017-01-20 16:42:28,563] [INFO]  [reminder::21] >>>>func: save_daily_list : sssssss
+[2017-01-20 17:01:02,887] [INFO]  [reminder::20] >>>>func: save_daily_list : 
+[2017-01-20 17:01:09,512] [INFO]  [reminder::20] >>>>func: save_daily_list : wwwwwwwsssss
+[2017-01-20 17:01:29,302] [INFO]  [reminder::20] >>>>func: save_daily_list : wwwwwwwsssssssssssssssssssssssssssssssssssssqqqqqqqqqqqq
+[2017-01-20 17:01:59,966] [INFO]  [reminder::20] >>>>func: save_daily_list : q
+[2017-01-20 18:04:14,048] [INFO]  [reminder::22] >>>>func: save_daily_list : ssssss
+[2017-01-20 18:04:41,305] [INFO]  [reminder::22] >>>>func: save_daily_list : ssssss
+[2017-01-20 18:06:06,075] [INFO]  [reminder::22] >>>>func: save_daily_list : ssssssssss
+[2017-01-20 18:06:19,387] [INFO]  [reminder::22] >>>>func: save_daily_list : sssssss
+[2017-01-20 18:06:26,187] [INFO]  [reminder::22] >>>>func: save_daily_list : sssssssssssss
+[2017-01-20 18:08:16,549] [INFO]  [reminder::22] >>>>func: save_daily_list : 11111112222sss
+[2017-01-20 18:08:28,096] [INFO]  [reminder::22] >>>>func: save_daily_list : 11111112222sssee
+[2017-01-20 18:08:33,553] [INFO]  [reminder::22] >>>>func: save_daily_list : 11111112222ssseeeee
+[2017-01-20 18:09:46,698] [INFO]  [reminder::22] >>>>func: save_daily_list : sssssss
+[2017-01-20 18:10:31,900] [INFO]  [reminder::22] >>>>func: save_daily_list : ssssss
+[2017-01-20 18:10:37,680] [INFO]  [reminder::22] >>>>func: save_daily_list : ssssssssss
+[2017-01-20 18:10:44,693] [INFO]  [reminder::22] >>>>func: save_daily_list : ssssssssssssss
+[2017-01-20 18:10:46,836] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:47,789] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:48,786] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:49,796] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:50,533] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:51,528] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:52,058] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:53,029] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:53,739] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:54,325] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:54,964] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:55,693] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:56,352] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:57,010] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:10:58,032] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:11:00,046] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:11:01,013] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:11:25,595] [INFO]  [reminder::22] >>>>func: save_daily_list : asjdajksgdjkasgd
+[2017-01-20 18:11:34,802] [INFO]  [reminder::22] >>>>func: save_daily_list : asjdajksgdjkasgdfdd
+[2017-01-20 18:11:44,147] [INFO]  [reminder::22] >>>>func: save_daily_list : fffff
+[2017-01-20 18:11:51,226] [INFO]  [reminder::22] >>>>func: save_daily_list : ffffffffffff11
+[2017-01-20 18:16:10,059] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:16:11,378] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:16:12,308] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:16:13,030] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:16:13,967] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:16:14,776] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:16:15,667] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:16:18,526] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:16:20,457] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:20:45,729] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:20:46,302] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-20 18:21:16,355] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-22 10:20:46,642] [INFO]  [reminder::22] >>>>func: save_daily_list : dddddd
+[2017-01-22 10:22:22,276] [INFO]  [reminder::22] >>>>func: save_daily_list : dddddd
+[2017-01-22 10:22:22,286] [ERROR]  [reminder::38] >>>>func: save_daily_list : 'NoneType' object has no attribute 'content'
+Traceback (most recent call last):
+  File "E:/WorkSpace/ooo/Wing\reminder\views.py", line 34, in save_daily_list
+    dy.content = content
+AttributeError: 'NoneType' object has no attribute 'content'
+[2017-01-22 10:23:51,556] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-22 10:23:51,559] [INFO]  [reminder::22] >>>>func: save_daily_list : oooo
+[2017-01-22 10:24:53,141] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-22 10:25:01,226] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-22 10:25:04,698] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-22 10:25:10,230] [INFO]  [reminder::22] >>>>func: save_daily_list : oooo
+[2017-01-22 10:25:44,375] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-22 10:25:45,052] [INFO]  [reminder::22] >>>>func: save_daily_list : 
+[2017-01-22 10:25:56,051] [INFO]  [reminder::22] >>>>func: save_daily_list : oooo
+[2017-01-22 15:14:50,473] [INFO]  [reminder::22] >>>>func: operate_daily_list : 
+[2017-01-22 15:14:50,476] [INFO]  [reminder::22] >>>>func: operate_daily_list : ffff
+[2017-01-22 15:14:50,492] [INFO]  [reminder::22] >>>>func: operate_daily_list : 
+[2017-01-22 15:14:50,493] [INFO]  [reminder::22] >>>>func: operate_daily_list : 
+[2017-01-22 15:32:10,075] [INFO]  [reminder::22] >>>>func: operate_daily_list : 
+[2017-01-22 15:32:43,519] [INFO]  [reminder::22] >>>>func: operate_daily_list : 
+[2017-01-22 15:34:40,273] [INFO]  [reminder::22] >>>>func: operate_daily_list : 吃饼干
+[2017-01-22 15:34:46,959] [INFO]  [reminder::22] >>>>func: operate_daily_list : 喝牛奶
+[2017-01-22 15:34:55,696] [INFO]  [reminder::22] >>>>func: operate_daily_list : 锻炼身体
+[2017-01-22 16:08:40,841] [INFO]  [reminder::22] >>>>func: operate_daily_list : 999
+[2017-01-22 16:08:44,667] [INFO]  [reminder::22] >>>>func: operate_daily_list : 
+[2017-01-22 16:10:44,665] [INFO]  [reminder::22] >>>>func: operate_daily_list : 99999
+[2017-01-22 16:10:50,121] [INFO]  [reminder::22] >>>>func: operate_daily_list : 99999
